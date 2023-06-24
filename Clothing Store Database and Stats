@@ -1,0 +1,30 @@
+--Create a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, item TEXT, inventory INTEGER, loss INTEGER, price INTEGER);
+
+INSERT INTO clothing VALUES (1, "shoes",50, 12, 45.00);
+INSERT INTO clothing VALUES (2, "tshirts",75, 3, 20.50);
+INSERT INTO clothing VALUES (3, "blouses",30, 6, 30.00);
+INSERT INTO clothing VALUES (4, "underwear",20, 12, 5.50);
+INSERT INTO clothing VALUES (5, "purses",10, 3, 20.50);
+INSERT INTO clothing VALUES (6, "necklaces", 10, 1, 10.00);
+INSERT INTO clothing VALUES (7, "hats", 30, 7, 15);
+INSERT INTO clothing VALUES (8, "jeans", 45, 5, 50.00);
+INSERT INTO clothing VALUES (9, "tank tops", 30, 4, 10.00);
+INSERT INTO clothing VALUES (10, "pants", 33, 2, 25.00);
+INSERT INTO clothing VALUES (11, "keychains", 11, 1, 5.00);
+INSERT INTO clothing VALUES (12, "perfume", 6, 0, 25.50);
+INSERT INTO clothing VALUES (13, "dresses", 22, 2, 20.20);
+INSERT INTO clothing VALUES (14, "ties", 20, 6, 15.00); 
+INSERT INTO clothing VALUES (15, "socks", 12, 4, 5.50);
+
+--display the database ordered by price. 
+SELECT * FROM clothing;
+ORDER BY price desc; 
+
+--what are the top 5 loss items? 
+SELECT item, price, loss
+FROM store
+order by loss desc
+limit 5; 
+
